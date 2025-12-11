@@ -42,14 +42,9 @@ Beyond the educational goals, I wanted to recreate the joy of buying and unpacki
 
 ## Getting Started
 
-1. Navigate to the [Releases](../../releases) section
-2. Download the latest executable file
-3. Run the application and start collecting!
-
-**System Requirements:**
-- Windows 7 or higher
-- .NET Framework (included with most Windows installations)
-
+1. Open the app in Visual Studio 2022 or newer
+2. Run the project
+3. Use it and have fun
 ---
 
 ## Technologies Used
@@ -61,7 +56,6 @@ Beyond the educational goals, I wanted to recreate the joy of buying and unpacki
 ---
 
 ## Screenshots
-*Coming soon!*
 
 <img width="332" height="507" alt="image" src="https://github.com/user-attachments/assets/c2e53023-e6ba-49cc-a3fd-0a73ce1e93db" />
 
