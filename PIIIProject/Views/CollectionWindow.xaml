@@ -1,0 +1,102 @@
+﻿<Window x:Class="PIIIProject.Views.CollectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIIIProject.Views"
+        mc:Ignorable="d"
+        Title="CollectionWindow" Height="510" Width="780" 
+        WindowStartupLocation="CenterScreen"
+        Background="#21386E"
+        Foreground="Snow"
+        Icon="../Images/icon.ico"
+        FontFamily="{StaticResource CustomFont}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <!-- Banner -->
+        <Image Source="../Images/Titles/owned cards.png" Margin="14" Height="80" 
+           HorizontalAlignment="Center" Grid.Row="0"/>
+
+        <Button x:Name="backBtn" Background="Transparent" BorderThickness="0" HorizontalAlignment="left" 
+                    Margin="10,0,0,0" Width="50" Click="BackBtn_Click">
+            <Image Source="../Images/backarrow.png" Height="60" Grid.Column="0" RenderTransformOrigin="0.8,0.5" />
+        </Button>
+
+
+        <!-- ListBox of Owned Cards-->
+        <Border Grid.Row="1" BorderBrush="#FFCB05" BorderThickness="5" Margin="30,0,30,0">
+            <ListBox x:Name="lbCollection" Foreground="snow" Background="#3466AF" PreviewMouseLeftButtonDown="LbCollection_Click"  
+             Width="710" HorizontalAlignment="Center">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!-- Using a UniformGrid with two columns to wrap the items into two columns -->
+                        <UniformGrid Columns="2" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10,5,0,5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Image for the card -->
+                            <Image Grid.ColumnSpan="2" Grid.RowSpan="5" Height="200" Width="130" VerticalAlignment="Center" HorizontalAlignment="Center"
+                              Margin="0,0,5,0" Grid.Column="0" Grid.Row="0" Source="{Binding CardSource}"/>
+
+                            <!-- Labels for item data -->
+                            <Label Grid.Column="2" Grid.Row="0" Content="Name:" Foreground="#FFCB05"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,6,0,0" Grid.Column="3" Grid.Row="0" Text="{Binding Name}" Foreground="#21386E"/>
+
+                            <Label Content="Type:" Grid.Column="2" Grid.Row="1" Foreground="#FFCB05"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,6,0,0" Grid.Column="3" Grid.Row="1" Text="{Binding CardType}" Foreground="snow"/>
+
+                            <Label Content="Quality:" Grid.Column="2" Grid.Row="2" Foreground="#FFCB05"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,6,0,0" Grid.Column="3" Grid.Row="2" Text="{Binding Quality}" Foreground="snow"/>
+
+                            <Label Content="Element:" Grid.Column="2" Grid.Row="3" Foreground="#FFCB05"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,6,0,0" Grid.Column="3" Grid.Row="3" Text="{Binding ElementalType}" Foreground="snow"/>
+
+                            <Label Content="Price:" Grid.Column="2" Grid.Row="4" Foreground="#FFCB05"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,6,0,0" Grid.Column="3" Grid.Row="4" Text="{Binding Price}" Foreground="#28cc25"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+
+        <!-- Utility Buttons -->
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+          
+            <Button x:Name="cardShopBtn" Height="50" Width="180" Content="Custom Collection" FontSize="14" Grid.Column="0"
+                    Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="4" Click="BtnSwitchCollections_Click"/>
+            <Button x:Name="SellBtn" Height="50" Width="180" Content="Sell Card" FontSize="18" Grid.Column="1" Click="SellBtn_Click"
+                    Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="4" />
+
+
+        </Grid>
+    </Grid>
+</Window>

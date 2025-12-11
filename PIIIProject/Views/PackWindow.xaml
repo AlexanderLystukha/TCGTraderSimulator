@@ -1,0 +1,65 @@
+﻿<Window x:Class="PIIIProject.Views.PackWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIIIProject.Views"
+        mc:Ignorable="d"
+        Title="PackWindow" Height="480" Width="555" 
+        Background="#21386E" 
+        Foreground="#FFCB05"
+        WindowStartupLocation="CenterScreen"
+        Icon="../Images/icon.ico"
+        FontFamily="{StaticResource CustomFont}">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Banner -->
+        <Image Source="../Images/Titles/owned packs.png" Margin="14" Height="85" 
+   HorizontalAlignment="Center" Grid.Row="0"/>
+
+        <Button x:Name="backBtn" Background="Transparent" BorderThickness="0" HorizontalAlignment="left" 
+                    Margin="7,0,0,0" Width="40" Click="BackBtn_Click">
+            <Image Source="../Images/backarrow.png" Height="50" Grid.Column="0" RenderTransformOrigin="0.8,0.5" />
+        </Button>
+
+
+
+        <!-- List box of owned packs -->
+
+        <Border Grid.Row="1" BorderBrush="#FFCB05" BorderThickness="5" Margin="30,0,30,45">
+            <ListBox x:Name="lbUserPacks" Foreground="snow" Background="#3466AF" MouseDoubleClick="LbUserPacks_MouseDoubleClick"
+             Width="485" HorizontalAlignment="Center">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <!-- Using a UniformGrid with two columns to wrap the items into two columns -->
+                        <UniformGrid Columns="2" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid HorizontalAlignment="Center" Width="220">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Image  Height="220" VerticalAlignment="Center" Margin="0,5,0,10" Source="{Binding BoosterImage}"/>
+
+                            <TextBlock Text="Name:" Foreground="#FFCB05" Grid.Row="1"  HorizontalAlignment="Center">
+                                        <TextBlock Text="{Binding Name}" Foreground="snow"/>
+                            </TextBlock>
+
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Border>
+    </Grid>
+</Window>

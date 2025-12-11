@@ -1,0 +1,113 @@
+﻿<Window x:Class="PIIIProject.Views.MainMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIIIProject.Views"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="550" Width="350"
+        Background="#21386E"
+        Foreground="Snow"
+        WindowStartupLocation="CenterScreen"
+        Icon="../Images/icon.ico"
+        FontFamily="{StaticResource CustomFont}">
+
+    <Window.Resources>
+        <FontFamily x:Key="CustomFont">pack://application:,,,//../Fonts/guardener.otf#guardener</FontFamily>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+
+        </Grid.RowDefinitions>
+
+
+
+        <!-- Utility Buttons -->
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Back Button -->
+            <Button Grid.Column="0" x:Name="LoadBtn" Background="Transparent" BorderThickness="0" HorizontalAlignment="left" 
+                    Margin="5,0,0,0" Width="35" Click="BackButton_Click">
+                <Image Source="../Images/backarrow.png" Height="30" Grid.Column="0" RenderTransformOrigin="0.8,0.5" />
+            </Button>
+
+            <!-- Balance -->
+            <TextBlock Grid.Column="1" Grid.Row="0" Margin="10" 
+            VerticalAlignment="Center" FontSize="18" >Balance: 
+              <TextBlock x:Name="balanceCount" Text="0"/>₽</TextBlock>
+
+        </Grid>
+
+        <!-- Profile Name -->
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" 
+        VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18"
+        Foreground="#FFCB05" >
+             <TextBlock x:Name="playerName" Text="[Insert Profile Name]"/> </TextBlock>
+
+        <!-- Best Card -->
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+
+            <TextBlock Margin="0,15,0,0" FontWeight="DemiBold" Text="Your Best Card"
+   VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
+
+            <Border BorderBrush="#FFCB05" BorderThickness="4" 
+                Width="200" Height="auto" Background="#3466AF"
+                    Margin="0,5,0,15">
+
+                <Grid HorizontalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    
+                    <TextBlock HorizontalAlignment="Center"  Margin="0, 10">Card Name:
+                        <TextBlock x:Name="cardName" Text="x"/> </TextBlock>
+                    
+                    <Image Grid.Row="1" x:Name="bestCardIMG" Width="auto" Height="180" Margin="0,0,0,10"/>
+                </Grid>
+
+            </Border>
+
+            <!-- Value of the best card-->
+            <TextBlock Margin="0,0,0,10" FontWeight="DemiBold" Foreground="snow"
+               VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20">Value: 
+                 <TextBlock x:Name="valueBestCard"  Text="0"/>₽</TextBlock>
+
+        </StackPanel>
+
+        <Grid Grid.Row="3" Margin="7">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="marketBtn" Grid.Row="0" Height="35" Width="100" Margin="0,0,0, 15" Click="MarketBtn_Click"
+                   Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="3">Market</Button>
+            <Button x:Name="packsBtn" Grid.Row="1" Height="35" Width="100" Margin="0,0,0, 15" Click="PacksBtn_Click"
+                    Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="3">Packs</Button>
+            <Button x:Name="collectionBtn" Grid.Column="1" Height="35" Width="100" Margin="0,0,0, 15" Click="CollectionBtn_Click"
+                    Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="3">Collection</Button>
+            <Button x:Name="customCardBtn" Grid.Row="1" Grid.Column="1" Height="35" Width="100" Margin="0,0,0,15" Click="CustomCardBtn_Click"
+                    Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="3">Custom Card</Button>
+
+        </Grid>
+
+    </Grid>
+</Window>

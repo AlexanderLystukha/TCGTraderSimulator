@@ -1,0 +1,129 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\guardener.otf" />
+    <None Remove="Fonts\guardener.ttf" />
+    <None Remove="Images\backarrow.png" />
+    <None Remove="Images\BoosterPack\booster1.png" />
+    <None Remove="Images\BoosterPack\booster2.png" />
+    <None Remove="Images\BoosterPack\booster3.png" />
+    <None Remove="Images\BoosterPack\booster4.png" />
+    <None Remove="Images\BoosterPack\booster5.png" />
+    <None Remove="Images\icon.ico" />
+    <None Remove="Images\load-48.png" />
+    <None Remove="Images\PokemonCards\Common\c1.jpg" />
+    <None Remove="Images\PokemonCards\Common\c10.jpg" />
+    <None Remove="Images\PokemonCards\Common\c11.jpg" />
+    <None Remove="Images\PokemonCards\Common\c12.jpg" />
+    <None Remove="Images\PokemonCards\Common\c13.jpg" />
+    <None Remove="Images\PokemonCards\Common\c14.jpg" />
+    <None Remove="Images\PokemonCards\Common\c15.jpg" />
+    <None Remove="Images\PokemonCards\Common\c16.jpg" />
+    <None Remove="Images\PokemonCards\Common\c17.jpg" />
+    <None Remove="Images\PokemonCards\Common\c18.jpg" />
+    <None Remove="Images\PokemonCards\Common\c19.jpg" />
+    <None Remove="Images\PokemonCards\Common\c2.jpg" />
+    <None Remove="Images\PokemonCards\Common\c20.jpg" />
+    <None Remove="Images\PokemonCards\Common\c3.jpg" />
+    <None Remove="Images\PokemonCards\Common\c4.jpg" />
+    <None Remove="Images\PokemonCards\Common\c5.jpg" />
+    <None Remove="Images\PokemonCards\Common\c6.jpg" />
+    <None Remove="Images\PokemonCards\Common\c7.jpg" />
+    <None Remove="Images\PokemonCards\Common\c8.jpg" />
+    <None Remove="Images\PokemonCards\Common\c9.jpg" />
+    <None Remove="Images\PokemonCards\FullArt\fa1.jpg" />
+    <None Remove="Images\PokemonCards\FullArt\fa2.jpg" />
+    <None Remove="Images\PokemonCards\FullArt\fa3.jpg" />
+    <None Remove="Images\PokemonCards\FullArt\fa4.jpg" />
+    <None Remove="Images\PokemonCards\FullArt\fa5.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h1.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h10.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h2.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h3.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h4.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h5.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h6.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h7.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h8.jpg" />
+    <None Remove="Images\PokemonCards\Holographic\h9.jpg" />
+    <None Remove="Images\prompt icon.ico" />
+    <None Remove="Images\Save-64.png" />
+    <None Remove="Images\Title.png" />
+    <None Remove="Images\Titles\custom card maker.png" />
+    <None Remove="Images\Titles\marketplace.png" />
+    <None Remove="Images\Titles\owned cards.png" />
+    <None Remove="Images\Titles\owned packs.png" />
+    <None Remove="Images\Titles\pack market.png" />
+    <None Remove="Images\Titles\Profiles.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Profiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\guardener.otf" />
+    <Resource Include="Fonts\guardener.ttf" />
+    <Resource Include="Images\backarrow.png" />
+    <Resource Include="Images\BoosterPack\booster1.png" />
+    <Resource Include="Images\BoosterPack\booster2.png" />
+    <Resource Include="Images\BoosterPack\booster3.png" />
+    <Resource Include="Images\BoosterPack\booster4.png" />
+    <Resource Include="Images\BoosterPack\booster5.png" />
+    <Resource Include="Images\icon.ico" />
+    <Resource Include="Images\load-48.png" />
+    <Resource Include="Images\PokemonCards\Common\c1.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c10.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c11.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c12.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c13.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c14.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c15.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c16.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c17.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c18.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c19.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c2.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c20.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c3.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c4.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c5.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c6.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c7.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c8.jpg" />
+    <Resource Include="Images\PokemonCards\Common\c9.jpg" />
+    <Resource Include="Images\PokemonCards\FullArt\fa1.jpg" />
+    <Resource Include="Images\PokemonCards\FullArt\fa2.jpg" />
+    <Resource Include="Images\PokemonCards\FullArt\fa3.jpg" />
+    <Resource Include="Images\PokemonCards\FullArt\fa4.jpg" />
+    <Resource Include="Images\PokemonCards\FullArt\fa5.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h1.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h10.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h2.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h3.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h4.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h5.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h6.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h7.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h8.jpg" />
+    <Resource Include="Images\PokemonCards\Holographic\h9.jpg" />
+    <Resource Include="Images\prompt icon.ico" />
+    <Resource Include="Images\Save-64.png" />
+    <Resource Include="Images\Titles\custom card maker.png" />
+    <Resource Include="Images\Titles\marketplace.png" />
+    <Resource Include="Images\Titles\owned cards.png" />
+    <Resource Include="Images\Titles\owned packs.png" />
+    <Resource Include="Images\Titles\pack market.png" />
+    <Resource Include="Images\Titles\Profiles.png" />
+    <Resource Include="Images\Titles\Title.png" />
+  </ItemGroup>
+
+</Project>

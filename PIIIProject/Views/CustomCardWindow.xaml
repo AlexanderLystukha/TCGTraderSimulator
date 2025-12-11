@@ -1,0 +1,137 @@
+﻿<Window x:Class="PIIIProject.Views.CustomCardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PIIIProject.Views"
+        mc:Ignorable="d"
+        Title="CustomCardWindow" Height="500" Width="650"
+        Background="#21386E"
+        Foreground="#FFCB05"
+        WindowStartupLocation="CenterScreen"
+        Icon="../Images/icon.ico"
+        FontFamily="{StaticResource CustomFont}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back Button -->
+
+        <Button x:Name="backBtn" Background="Transparent" BorderThickness="0" HorizontalAlignment="Right" 
+                    Margin="5,0,0,0" Width="35" Click="BackButton_Click">
+            <Image Source="../Images/backarrow.png" Height="50" Grid.Column="0" RenderTransformOrigin="0.8,0.5" />
+        </Button>
+
+        <!-- Banner -->
+
+        <Image Source="../Images/Titles/custom card maker.png" Height="70" Grid.Column="1" Grid.ColumnSpan="3"
+               HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+
+        <!-- Creation Elements -->
+
+
+        <!-- Elements radio buttons -->
+        <Grid Grid.Row="1" Grid.Column="1" x:Name="rdbContainer">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Elements" VerticalAlignment="Center" HorizontalAlignment="Left"
+                   FontSize="16" Foreground="#FFCB05" Margin="78,10,0,0"/>
+
+            <RadioButton GroupName="grpElement" Grid.Row="1" Content="Fire" x:Name="rdbFire" FlowDirection="RightToLeft"/>
+            <RadioButton GroupName="grpElement" Grid.Row="2" Content="Water" x:Name="rdbWater" FlowDirection="RightToLeft"/>
+            <RadioButton GroupName="grpElement" Grid.Row="3" Content="Grass" x:Name="rdbGrass" FlowDirection="RightToLeft"/>
+            <RadioButton GroupName="grpElement" Grid.Row="4" Content="Light" x:Name="rdbLight" FlowDirection="RightToLeft"/>
+            <RadioButton GroupName="grpElement" Grid.Row="5" Content="Darkness" x:Name="rdbDark" FlowDirection="RightToLeft"/>
+        </Grid>
+
+        <!-- Image of Custom Card -->
+        <Grid Grid.Row="1" Grid.Column="2" Margin="10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Border  BorderBrush="#FFCB05" BorderThickness="3">
+                <Image x:Name="cardIMG"/>
+            </Border>
+
+            <Button x:Name="chooseImageBtn"  Grid.Row="1" Height="35" Width="120" Margin="0,10,0,0" 
+                   Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="3" Click="ChooseImageBtn_Click">Select Image</Button>
+
+        </Grid>
+
+        <!-- Card Type and Name -->
+
+        <Grid Grid.Column="3" Grid.Row="1" x:Name="rightContainer">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="rdbCardType">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- If you have more than 1 set of radio buttons use GroupName property-->
+                <Label Content="Card Type" VerticalAlignment="Center" HorizontalAlignment="Left"
+                   FontSize="16" Foreground="#FFCB05" Margin="10,10,0,0"/>
+                <RadioButton GroupName="grpCardType" Grid.Row="1" Content="Common" x:Name="rdbCommon"/>
+                <RadioButton GroupName="grpCardType" Grid.Row="2" Content="Holographic" x:Name="rdbHolographic"/>
+                <RadioButton GroupName="grpCardType" Grid.Row="3" Content="FullArt" x:Name="rdbFullArt" />
+
+            </Grid>
+
+            <TextBlock TextWrapping="Wrap" Grid.Row="1" HorizontalAlignment="Left"
+             FontSize="20" VerticalAlignment="Top" Margin="10,31,0,0">
+                Card Name<TextBox x:Name="cardNameTxtBox" FontSize="14" Width="120" BorderThickness="2" Height="20"/>
+            </TextBlock>
+
+
+        </Grid>
+
+
+
+        <!-- Card Creation Manipulation Buttons -->
+
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Margin="0,15,0, 15" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="resetBtn"  Height="35" Width="100"
+                   Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="3" Click="ResetBtn_Click">Reset</Button>
+
+            <Button x:Name="createBtn"  Grid.Column="1" Height="35" Width="100" 
+                   Background="#3466AF" Foreground="#FFCB05" BorderBrush="#FFCB05" BorderThickness="3" Click="CreateBtn_Click">Create</Button>
+
+        </Grid>
+
+
+    </Grid>
+</Window>
